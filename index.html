@@ -40,13 +40,13 @@
             display: none;
         }
 
-        summary::after {
-            content: " ▶";
+        summary::before {
+            content: "▶ ";
             font-size: 1rem;
         }
 
-        details[open] summary::after {
-            content: " ▼";
+        details[open] summary::before {
+            content: "▼ ";
         }
 
         .project-desc {
