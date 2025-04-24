@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポートフォリオ</title>
+    <title>制作物一覧</title>
     <style>
         body {
             font-family: sans-serif;
@@ -80,7 +80,7 @@
 </head>
 
 <body>
-    <h1>ポートフォリオ</h1>
+    <h1>制作物一覧</h1>
 
     <!-- CUI 3D迷路 -->
     <details>
@@ -94,6 +94,17 @@
             <video src="./movies/cuimaze.mp4" controls></video>
             <img src="./images/cuimaze1.png" alt="スクリーンショット1">
             <img src="./images/cuimaze2.png" alt="スクリーンショット2">
+        </div>
+    </details>
+
+    <!-- CUI グラフ描画ツール -->
+    <details>
+        <summary>CUI グラフ描画ツール</summary>
+        <p class="project-desc">Linuxのターミナル上で動作する、完全テキストベースのグラフ描画ツールです。<br>ANSIのエスケープシーケンスによる文字色の変更により、複数のグラフの描画を可能にしています。<br>グラフについて、曲線の太さが常に一定になるように描画します。単にy座標だけを引き伸ばすと、曲線の傾きによってグラフの太さが変わってきてしまいます。<br>そこで本作品では、微分や三角関数などの数学的な操作を用いることで、グラフの傾きによらず、一定の太さでグラフを描画する処理を作成しました。</p>
+        <a class="project-link" href="https://github.com/RusKRusK/CUI-graph" target="_blank">→ リポジトリを見る</a>
+
+        <div class="project-media">
+            <img src="./images/cuigraph1.png" alt="スクリーンショット1">
         </div>
     </details>
 
