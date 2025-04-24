@@ -41,12 +41,12 @@
         }
 
         summary::after {
-            content: " ⌄";
+            content: " ▶";
             font-size: 1rem;
         }
 
         details[open] summary::after {
-            content: " ⌃";
+            content: " ▼";
         }
 
         .project-desc {
@@ -76,49 +76,90 @@
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+        }
     </style>
 </head>
 
 <body>
     <h1>制作物一覧</h1>
 
-    <!-- CUI 3D迷路 -->
-    <details>
-        <summary>CUI 3D迷路</summary>
-        <p class="project-desc">
-            Linuxのターミナル上で動作する、完全テキストベースの3D風迷路ゲームです。<br>学園祭のクラス展示企画「白黒世界からの脱出」に合わせて制作した作品です。<br>配色はモノクロに統一し、テーマに沿った世界観を構築しました。<br>迷路をクリアすると、宝箱が開き「パレットを手に入れた」という演出がアスキーアートのアニメーションで表示されます。<br>本作は、ANSIのエスケープシーケンスによる文字色の変更とカーソル位置の指定を使用しています。<br>これによって、CUI環境でも疑似的な3D表現を実現しています。<br>いわゆる『DOOM』のような、前後移動と左右の視点回転が可能です。
+    <div class="container">
+        <h2>CUIシリーズ</h2>
+        <p>
+            CUI（Character User Interface）環境において、表現力の限界に挑戦した作品です。<br>本シリーズでは、ANSIエスケープシーケンスを用いた文字色やカーソル制御といった低レイヤの機能を駆使し、3D迷路やグラフ描画、ペイントソフトなど、GUIに匹敵する視覚的体験をターミナル上で実現しています。<br>限られた表現手段の中で、どのようにインタラクティブや視認性を高めるか、アルゴリズムとデザインの両面から試行錯誤を重ねた成果です。<br>Raspberry
+            Piなど、「比較的低スペックな環境でも動作できるように」という目標から、CやC++で記述して、標準出力でグラフィックを表現しています。<br>初めは趣味でペイントソフトやグラフ描画ツールを実装しておりましたが、学園祭のクラス展示『白黒世界からの脱出』のギミックの1つとして、3D迷路が採用されました。
         </p>
-        <a class="project-link" href="https://github.com/RusKRusK/CUI-maze" target="_blank">→ リポジトリを見る</a>
+        <!-- CUI 3D迷路 -->
+        <details>
+            <summary>CUI 3D迷路</summary>
+            <p class="project-desc">
+                Linuxのターミナル上で動作する、完全テキストベースの3D風迷路ゲームです。<br>学園祭のクラス展示企画「白黒世界からの脱出」に合わせて制作した作品です。<br>配色はモノクロに統一し、テーマに沿った世界観を構築しました。<br>迷路をクリアすると、宝箱が開き「パレットを手に入れた」という演出がアスキーアートのアニメーションで表示されます。<br>本作は、ANSIのエスケープシーケンスによる文字色の変更とカーソル位置の指定を使用しています。<br>これによって、CUI環境でも疑似的な3D表現を実現しています。<br>いわゆる『DOOM』のような、前後移動と左右の視点回転が可能です。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/CUI-maze" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <video src="./movies/cuimaze.mp4" controls></video>
+                <img src="./images/cuimaze1.png" alt="スクリーンショット1">
+                <img src="./images/cuimaze2.png" alt="スクリーンショット2">
+            </div>
+        </details>
 
-        <div class="project-media">
-            <video src="./movies/cuimaze.mp4" controls></video>
-            <img src="./images/cuimaze1.png" alt="スクリーンショット1">
-            <img src="./images/cuimaze2.png" alt="スクリーンショット2">
-        </div>
-    </details>
+        <!-- CUI グラフ描画ツール -->
+        <details>
+            <summary>CUI グラフ描画ツール</summary>
+            <p class="project-desc">
+                Linuxのターミナル上で動作する、完全テキストベースのグラフ描画ツールです。<br>ANSIのエスケープシーケンスを用いた文字色の変更により、複数のグラフの描画を可能にしています。<br>グラフについて、曲線の太さが常に一定になるように描画します。単にy座標だけを引き伸ばすと、曲線の傾きによってグラフの太さが変わってきてしまいます。<br>そこで本作品では、微分や三角関数などの数学的な操作を用いることで、グラフの傾きによらず、一定の太さでグラフを描画する処理を作成しました。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/CUI-graph" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/cuigraph1.png" alt="スクリーンショット1">
+            </div>
+        </details>
 
-    <!-- CUI グラフ描画ツール -->
-    <details>
-        <summary>CUI グラフ描画ツール</summary>
-        <p class="project-desc">Linuxのターミナル上で動作する、完全テキストベースのグラフ描画ツールです。<br>ANSIのエスケープシーケンスによる文字色の変更により、複数のグラフの描画を可能にしています。<br>グラフについて、曲線の太さが常に一定になるように描画します。単にy座標だけを引き伸ばすと、曲線の傾きによってグラフの太さが変わってきてしまいます。<br>そこで本作品では、微分や三角関数などの数学的な操作を用いることで、グラフの傾きによらず、一定の太さでグラフを描画する処理を作成しました。</p>
-        <a class="project-link" href="https://github.com/RusKRusK/CUI-graph" target="_blank">→ リポジトリを見る</a>
+        <!-- CUI ペイントソフト -->
+        <details>
+            <summary>CUI ペイントソフト</summary>
+            <p class="project-desc">
+                Linuxのターミナル上で動作する、完全テキストベースのペイントツールです。<br>ANSIのエスケープシーケンスにを用いた文字色と背景色の変更により、空白文字に色を付けた、ドット絵のような表現が可能です。<br>作成したイラストは、他のCUIソフトウェアに流用できるように、「printf関数」や「二次元配列」としてエクスポートできます。2枚目の画像は、制作したイラストを色番号の二次元配列として出力している様子です。<br>他にも、イラストのセーブとロードや左右反転など、自身にとってより使いやすいドット絵制作ソフトを追求しました。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/CUI-paint" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/cuipaint1.png" alt="スクリーンショット1">
+                <img src="./images/cuipaint2.png" alt="スクリーンショット2">
+            </div>
+        </details>
 
-        <div class="project-media">
-            <img src="./images/cuigraph1.png" alt="スクリーンショット1">
-        </div>
-    </details>
+        <details>
+            <summary>CUI イラスト3D表示</summary>
+            <p class="project-desc">Linuxのターミナル上で動作する、完全テキストベースで疑似的に3D表示をするプログラムです。<br>CUI
+                ペイントソフトで作成したイラストの上を飛び回るように見ることができ、作成したイラストを別の視点で体験できます。<br>単純な線形変換ではなく、三角関数などの数学的操作と座標計算によって、奥行きを感じられるような3D表示を実現しています。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/CUI-3D" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <video src="./movies/cui3d.mp4" controls></video>
+                <img src="./images/cui3d.png" alt="スクリーンショット1">
+            </div>
+        </details>
+    </div>
+
+    <div class="container">
+        <h2>その他</h2>
+    </div>
 
     <!-- テンプレート -->
-    <details>
+    <!-- <details>
         <summary>タイトル</summary>
         <p class="project-desc">説明</p>
         <a class="project-link" href="" target="_blank">→ リポジトリを見る</a>
-
         <div class="project-media">
             <video src="" controls></video>
             <img src="" alt="スクリーンショット1">
         </div>
-    </details>
+    </details> -->
 
 </body>
 
