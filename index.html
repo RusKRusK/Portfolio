@@ -168,6 +168,31 @@
     </div>
 
     <div class="container">
+        <h2>Gemini API</h2>
+        <p>Googleの提供するLLM(大規模言語モデル)である、GeminiのAPIを用いた作品です。</p>
+        <!-- Discord Bot -->
+        <details>
+            <summary>Discord Bot</summary>
+            <p class="project-desc"> Discordサーバー内でのコミュニケーションを支援する多機能Botです。<br> 友人とのDiscordサーバーでの運用を想定して開発されており、「モザイク機能」では、NSFWな画像に対して一定数のリアクションが付くと、自動で画像をモザイク処理し、元画像を専用スレッドへ非通知で複製、元のメッセージを削除します。<br> 「Starboard機能」では、特定のリアクション数を超えたメッセージを専用チャンネルへ自動転送し、注目メッセージを一覧できるようにしました。閾値やモザイク強度は管理者向けのスラッシュコマンドで柔軟に設定可能です。<br>さらに、Gemini APIを活用した画像説明機能も備えております、ただし、Geminiの利用規約では、NSFWなコンテンツの取り扱いを禁止しています。そのため、ユーザーがアップロードした画像をGeminiに送信する前に、nsfwjsというtensorflowのモデルを使用することで、画像が適切かどうかを判定して、不適切な画像を自動的にはじくようにしました。NSFW対策やAIとの連携、ユーザー権限管理など、実際の運用を想定した設計を重視しました。 </p>
+            <a class="project-link" href="https://github.com/RusKRusK/RusKMon" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/discordbot1.png" alt="スクリーンショット1">
+                <img src="./images/discordbot2.png" alt="スクリーンショット2">
+            </div>
+        </details>
+        <!-- Gemini GUI -->
+        <details>
+            <summary>Gemini チャットアプリ</summary>
+            <p class="project-desc"> Google Gemini API（gemini-2.0-flash）を活用した、デスクトップ向けの多機能チャットアプリケーションです。<br> Tkinterを用いたGUIで設計されており、直感的な操作でAIとの会話を楽しむことができます。Gemini APIの特性を活かし、画像・動画・音声・PDFのメディアに対応しており、送信方法もファイル選択に加えてドラッグ＆ドロップに対応しています。<br> 会話には、ユーザー自身が任意の「システムプロンプト」を設定することができ、たとえばキャラクターを演じさせたり、専門分野に特化させたりといった使い方が可能です。<br> 会話履歴はJSON形式で保存・復元できるため、継続的な対話や再利用にも対応しています。また、Geminiの制限に応じて、300MBを超える大きなファイルは自動的にGemini File APIを使用するなど、実用性を重視した設計となっています。<br> 会話からドキュメントの要約、画像や音声を含むマルチモーダルなやり取りまで、日常的な幅広い利用を想定して開発されました。 </p>
+            <a class="project-link" href="https://github.com/RusKRusK/GeminiChatApp" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/gemini1.png" alt="スクリーンショット1">
+                <img src="./images/gemini2.png" alt="スクリーンショット2">
+            </div>
+        </details>
+    </div>
+
+    <div class="container">
         <h2>チーム制作</h2>
         <p>チームでの制作物です。</p>
         <!-- Treasure-on-Find -->
