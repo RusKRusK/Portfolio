@@ -67,7 +67,7 @@
             align-items: center;
             gap: 20px;
         }
-        
+
         .project-media img,
         .project-media video,
         .project-media iframe {
@@ -76,7 +76,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto 40px auto;
@@ -87,10 +87,71 @@
 
 <body>
     <h1>制作物一覧</h1>
-    
+
+    <div class="container">
+        <h2>Gemini API</h2>
+        <p>Googleの提供するLLM(大規模言語モデル)である、GeminiのAPIを用いた作品です。</p>
+        <!-- Discord Bot -->
+        <details>
+            <summary>Discord Bot</summary>
+            <p class="project-desc"> Discordサーバー内でのコミュニケーションを支援する多機能Botです。<br>
+                友人とのDiscordサーバーでの運用を想定して開発されており、「モザイク機能」では、NSFWな画像に対して一定数のリアクションが付くと、自動で画像をモザイク処理し、元画像を専用スレッドへ非通知で複製、元のメッセージを削除します。<br>
+                「Starboard機能」では、特定のリアクション数を超えたメッセージを専用チャンネルへ自動転送し、注目メッセージを一覧できるようにしました。閾値やモザイク強度は管理者向けのスラッシュコマンドで柔軟に設定可能です。<br>さらに、Gemini
+                APIを活用した画像説明機能も備えております、ただし、Geminiの利用規約では、NSFWなコンテンツの取り扱いを禁止しています。そのため、ユーザーがアップロードした画像をGeminiに送信する前に、nsfwjsというtensorflowのモデルを使用することで、画像が適切かどうかを判定して、不適切な画像を自動的にはじくようにしました。NSFW対策やAIとの連携、ユーザー権限管理など、実際の運用を想定した設計を重視しました。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/RusKMon" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/discordbot1.png" alt="スクリーンショット1">
+                <img src="./images/discordbot2.png" alt="スクリーンショット2">
+            </div>
+        </details>
+        <!-- Gemini GUI -->
+        <details>
+            <summary>Gemini チャットアプリ</summary>
+            <p class="project-desc">
+                このデスクトップ向け多機能チャットアプリケーションは、<strong>Google Gemini API (gemini-2.0-flash)</strong>
+                を活用し、ユーザーとAIの円滑な対話を可能にします。GUIフレームワークには<strong>PyQt5を採用</strong>しており、直感的で洗練された操作性を提供します。また、現代のユーザーの好みに合わせ、<strong>ダークテーマにも対応</strong>しました。
+            </p>
+
+            <h3>主な特徴</h3>
+            <ul>
+                <li><strong>直感的でモダンなGUI</strong>:
+                    PyQt5によるデスクトップアプリケーションとして設計されており、スムーズで視覚的に魅力的なインターフェースを実現しています。ユーザーはストレスなくAIとの会話を楽しめます。</li>
+                <li><strong>マルチモーダルな対話</strong>: Gemini
+                    APIの強力な特性を最大限に活かし、<strong>画像、動画、音声、PDF</strong>といった多様なメディア形式に対応しています。ファイルの送信は、通常のファイル選択に加え、<strong>ドラッグ＆ドロップ</strong>でも簡単に行えます。
+                </li>
+                <li><strong>柔軟なシステムインタラクション</strong>:
+                    ユーザーは任意の「<strong>システムインタラクション</strong>」を設定できます。これにより、AIに特定のキャラクターを演じさせたり、特定の専門分野に特化させたりと、ニーズに合わせたパーソナライズされた対話が可能です。
+                </li>
+                <li><strong>マークダウン表示への対応</strong>:
+                    Geminiからの返答がマークダウン形式で表示されるため、コードブロックや箇条書きなども適切に整形され、<strong>高い可読性</strong>でチャット内容を確認できます。</li>
+                <li><strong>会話履歴の保存・復元</strong>:
+                    会話履歴は<strong>JSON形式で保存・復元</strong>できるため、過去の対話を継続したり、必要な情報を再利用したりすることが容易です。これにより、実用性と利便性が大幅に向上しています。
+                </li>
+            </ul>
+            <h3>UIの強化とユーザビリティの向上</h3>
+            <p>
+                従来のバージョンからUIを大幅に改善しました。開発当初はTkinterを利用していましたが、PyQt5への移行により、より表現力豊かなUIコンポーネントを活用できるようになりました。また、<strong>ダークテーマに対応</strong>したり、メッセージ本文やシステムインタラクションの<strong>複数行入力</strong>により、長文のもスムーズに入力できるようにしたりしたことで、全体的なユーザビリティが向上しています。
+            </p>
+            <p>
+                このアプリケーションは、ドキュメントの要約から画像や音声を含むマルチモーダルなやり取りまで、日常的な幅広い利用シーンを想定して開発されました。
+            </p>
+            <a class="project-link" href="https://github.com/RusKRusK/GeminiChatApp" target="_blank">→ リポジトリを見る</a>
+            <div class="project-media">
+                <img src="./images/gemini1.png" alt="スクリーンショット1">
+                <img src="./images/gemini2.png" alt="スクリーンショット2">
+                <img src="./images/gemini3.png" alt="スクリーンショット3">
+                <img src="./images/gemini4.png" alt="スクリーンショット4">
+            </div>
+        </details>
+    </div>
+
     <div class="container">
         <h2>CUIシリーズ</h2>
-        <p>CUI（Character User Interface）環境における表現力の限界に挑んだ作品です。<br>本シリーズでは、ANSIエスケープシーケンスによる文字色の変更やカーソル制御といった低レイヤ機能を駆使し、3D迷路やグラフ描画、ペイントソフトなど、GUIに匹敵する視覚体験をターミナル上で実現しています。<br>限られた手段の中でいかにインタラクティブ性や視認性を高めるか、アルゴリズムとデザインの両面から試行錯誤を重ねました。<br>CやC++で記述されたプログラムは、Raspberry Piなどの比較的低スペックな環境でも動作可能なことを目指し、標準出力によってグラフィックを表現しています。<br>当初は趣味としてペイントソフトやグラフ描画ツールの開発を行っていましたが、やがて学園祭のクラス展示『白黒世界からの脱出』のギミックの一つとして、3D迷路が採用されるに至りました。</p>
+        <p>CUI（Character User
+            Interface）環境における表現力の限界に挑んだ作品です。<br>本シリーズでは、ANSIエスケープシーケンスによる文字色の変更やカーソル制御といった低レイヤ機能を駆使し、3D迷路やグラフ描画、ペイントソフトなど、GUIに匹敵する視覚体験をターミナル上で実現しています。<br>限られた手段の中でいかにインタラクティブ性や視認性を高めるか、アルゴリズムとデザインの両面から試行錯誤を重ねました。<br>CやC++で記述されたプログラムは、Raspberry
+            Piなどの比較的低スペックな環境でも動作可能なことを目指し、標準出力によってグラフィックを表現しています。<br>当初は趣味としてペイントソフトやグラフ描画ツールの開発を行っていましたが、やがて学園祭のクラス展示『白黒世界からの脱出』のギミックの一つとして、3D迷路が採用されるに至りました。
+        </p>
         <!-- CUI 3D迷路 -->
         <details>
             <summary>CUI 3D迷路</summary>
@@ -145,39 +206,15 @@
     </div>
 
     <div class="container">
-        <h2>Gemini API</h2>
-        <p>Googleの提供するLLM(大規模言語モデル)である、GeminiのAPIを用いた作品です。</p>
-        <!-- Discord Bot -->
-        <details>
-            <summary>Discord Bot</summary>
-            <p class="project-desc"> Discordサーバー内でのコミュニケーションを支援する多機能Botです。<br> 友人とのDiscordサーバーでの運用を想定して開発されており、「モザイク機能」では、NSFWな画像に対して一定数のリアクションが付くと、自動で画像をモザイク処理し、元画像を専用スレッドへ非通知で複製、元のメッセージを削除します。<br> 「Starboard機能」では、特定のリアクション数を超えたメッセージを専用チャンネルへ自動転送し、注目メッセージを一覧できるようにしました。閾値やモザイク強度は管理者向けのスラッシュコマンドで柔軟に設定可能です。<br>さらに、Gemini APIを活用した画像説明機能も備えております、ただし、Geminiの利用規約では、NSFWなコンテンツの取り扱いを禁止しています。そのため、ユーザーがアップロードした画像をGeminiに送信する前に、nsfwjsというtensorflowのモデルを使用することで、画像が適切かどうかを判定して、不適切な画像を自動的にはじくようにしました。NSFW対策やAIとの連携、ユーザー権限管理など、実際の運用を想定した設計を重視しました。 </p>
-            <a class="project-link" href="https://github.com/RusKRusK/RusKMon" target="_blank">→ リポジトリを見る</a>
-            <div class="project-media">
-                <img src="./images/discordbot1.png" alt="スクリーンショット1">
-                <img src="./images/discordbot2.png" alt="スクリーンショット2">
-            </div>
-        </details>
-        <!-- Gemini GUI -->
-        <details>
-            <summary>Gemini チャットアプリ</summary>
-            <p class="project-desc"> Google Gemini API（gemini-2.0-flash）を活用した、デスクトップ向けの多機能チャットアプリケーションです。<br> Tkinterを用いたGUIで設計されており、直感的な操作でAIとの会話を楽しむことができます。Gemini APIの特性を活かし、画像・動画・音声・PDFのメディアに対応しており、送信方法もファイル選択に加えてドラッグ＆ドロップに対応しています。<br> 会話には、ユーザー自身が任意の「システムインタラクション」を設定することができ、たとえばキャラクターを演じさせたり、専門分野に特化させたりといった使い方が可能です。<br> 会話履歴はJSON形式で保存・復元できるため、継続的な対話や再利用にも対応した、実用性を重視した設計となっています。<br> 会話からドキュメントの要約、画像や音声を含むマルチモーダルなやり取りまで、日常的な幅広い利用を想定して開発されました。 <br><br>本作品の公開後、UIの大幅な改善を行いました。（画像3,4枚目）<br>従来は、チャットの表示欄はGeminiからの返答の文字列をそのままテキストとして表示していましたが、マークダウン形式で返答された場合、非常に読みずらくなってしまっていたため、チャット履歴のマークダウン表示に対応いたしました。<br>Tkinterでマークダウンを表示するための手法として、当初はマークダウン用のパーサを自作しようと検討しておりましたが、安定した表示が困難であったため、マークダウンを一度HTMLに変換してから表示する必方法を採用いたしました。<br>この処理は、標準のTkinterだけでなく、TkinterDnD2とtkinterwebも使用しております。<br>また、メッセージ本文とシステムインタラクションの複数行入力にも対応することで、さらにユーザビリティを高めまることができました。<br>将来的にはTkinterではなく、ウェブアプリケーションとして実装するなどの別の方法でのGUIの実現も目指したいと考えております。<br>画像3枚目は、Geminiに出力させた架空のキャラクター「天川ひかり」のキャラクター設定をシステムインタラクションに落とし込んで会話をしたものです。作成したシステムインタラクションもリポジトリにて公開しております。</p>
-            <a class="project-link" href="https://github.com/RusKRusK/GeminiChatApp" target="_blank">→ リポジトリを見る</a>
-            <div class="project-media">
-                <img src="./images/gemini1.png" alt="スクリーンショット1">
-                <img src="./images/gemini2.png" alt="スクリーンショット2">
-                <img src="./images/gemini3.png" alt="スクリーンショット3">
-                <img src="./images/gemini4.png" alt="スクリーンショット4">
-            </div>
-        </details>
-    </div>
-    
-    <div class="container">
         <h2>ゲーム制作</h2>
-        <p>過去のゲーム制作物です。主に2Dのアクションゲームを開発しております。<br>目的に沿ったアセットが見つからない場合は自分でドット絵を描くことで補填しています。<br>開発環境はGameMakerやUnityのほかに、Pyxelといった「ファンタジー・コンソール」の開発環境を使用することもあります。</p>
+        <p>過去のゲーム制作物です。主に2Dのアクションゲームを開発しております。<br>目的に沿ったアセットが見つからない場合は自分でドット絵を描くことで補填しています。<br>開発環境はGameMakerやUnityのほかに、Pyxelといった「ファンタジー・コンソール」の開発環境を使用することもあります。
+        </p>
         <!-- アイワナ -->
         <details>
             <summary>I Wanna Be The Late Bloomer</summary>
-            <p class="project-desc">高難易度アクションゲーム『I Wanna Be The Guy』のファンゲームとして制作した、オリジナルの「アイワナ」派生作品です。<br>本作は、GameMakerを用いて開発しています。<br>針の配置やトラップ、ステージギミックなど、プレイヤーの試行錯誤と成長を引き出すような、シンプルかつ高難易度なアクションゲームを設計しました。</p>
+            <p class="project-desc">高難易度アクションゲーム『I Wanna Be The
+                Guy』のファンゲームとして制作した、オリジナルの「アイワナ」派生作品です。<br>本作は、GameMakerを用いて開発しています。<br>針の配置やトラップ、ステージギミックなど、プレイヤーの試行錯誤と成長を引き出すような、シンプルかつ高難易度なアクションゲームを設計しました。
+            </p>
             <div class="project-media">
                 <img src="./images/iwanna1.png" alt="スクリーンショット1">
                 <img src="./images/iwanna2.png" alt="スクリーンショット2">
@@ -187,7 +224,9 @@
         <!-- Unity -->
         <details>
             <summary>Unity</summary>
-            <p class="project-desc">Unityのチュートリアルに沿って制作した2Dアクションゲームです。画面上のさくらんぼを回収するようにプレイヤーを操作します。<br>通常のジャンプの他に、2段ジャンプや壁キックの機能も搭載しており、ジャンプボタンを押下する長さに応じてジャンプの高さを調整することができます。<br>より直感的な操作ができることを目指して制作しました。</p>
+            <p class="project-desc">
+                Unityのチュートリアルに沿って制作した2Dアクションゲームです。画面上のさくらんぼを回収するようにプレイヤーを操作します。<br>通常のジャンプの他に、2段ジャンプや壁キックの機能も搭載しており、ジャンプボタンを押下する長さに応じてジャンプの高さを調整することができます。<br>より直感的な操作ができることを目指して制作しました。
+            </p>
             <div class="project-media">
                 <video src="./movies/unity1.mp4" controls></video>
             </div>
@@ -200,7 +239,9 @@
         <!-- Treasure-on-Find -->
         <details>
             <summary>Treasure on Find</summary>
-            <p class="project-desc">「スタンプラリー×クイズ」で学校・企業見学をサポートする、スマホ向けWebサイトです。<br>アプリの企画と、コンパスなどのUIのデザインを担当しました。<br>コンパスやマップを駆使して、現地のQRコードを探します。QRコードを読み取ることでポイント獲得、自動的に始まるクイズに正解するとさらにポイントが獲得できます。これらを繰り返すことで楽しく学校・企業見学をサポートできます。<br>本作品は、2023年度の日タイ高校生ICTフェアに向けた、2つ下の学年の後輩のサポートとして参加し、5人のチームで協力して最後まで開発を行いました。</p>
+            <p class="project-desc">
+                「スタンプラリー×クイズ」で学校・企業見学をサポートする、スマホ向けWebサイトです。<br>アプリの企画と、コンパスなどのUIのデザインを担当しました。<br>コンパスやマップを駆使して、現地のQRコードを探します。QRコードを読み取ることでポイント獲得、自動的に始まるクイズに正解するとさらにポイントが獲得できます。これらを繰り返すことで楽しく学校・企業見学をサポートできます。<br>本作品は、2023年度の日タイ高校生ICTフェアに向けた、2つ下の学年の後輩のサポートとして参加し、5人のチームで協力して最後まで開発を行いました。
+            </p>
             <a class="project-link" href="https://github.com/Wholesome-Student/ToF" target="_blank">→ リポジトリを見る</a><br>
             <a class="project-link" href="https://tof.deno.dev/unsupporteddevice.html" target="_blank">→ サイトを見る</a>
             <div class="project-media">
@@ -225,8 +266,10 @@
         <!-- コミックマーケット -->
         <details>
             <summary>コミックマーケット</summary>
-            <p class="project-desc">コミックマーケット105に、サークル『MUHO』として友人と出店しました。<br>友人の執筆した本の表紙を担当した他、「Toki Pona」という人工言語の文法を解説する文法書を執筆いたしました。</p>
-            <a class="project-link" href="https://muho.booth.pm/items/6408098" target="_blank">→ 執筆した本(電子版の販売ページに飛びます。)</a>
+            <p class="project-desc">コミックマーケット105に、サークル『MUHO』として友人と出店しました。<br>友人の執筆した本の表紙を担当した他、「Toki
+                Pona」という人工言語の文法を解説する文法書を執筆いたしました。</p>
+            <a class="project-link" href="https://muho.booth.pm/items/6408098" target="_blank">→
+                執筆した本(電子版の販売ページに飛びます。)</a>
             <div class="project-media">
                 <img src="./images/book1.png" alt="スクリーンショット1">
             </div>
@@ -243,13 +286,14 @@
         <details>
             <summary>きょうの数学</summary>
             <p class="project-desc">京都府高等学校数学研究会が発行しているフリーペーパー『きょうの数学』に記事を寄稿いたしました。</p>
-            <a class="project-link" href="https://kyotomath.wordpress.com/wp-content/uploads/2023/05/kyomath202303.pdf" target="_blank">→ 記事を見る</a>
+            <a class="project-link" href="https://kyotomath.wordpress.com/wp-content/uploads/2023/05/kyomath202303.pdf"
+                target="_blank">→ 記事を見る</a>
         </details>
 
     </div>
 
-        <!-- テンプレート -->
-        <!-- <details>
+    <!-- テンプレート -->
+    <!-- <details>
             <summary>タイトル</summary>
             <p class="project-desc">説明</p>
             <a class="project-link" href="" target="_blank">→ リポジトリを見る</a>
