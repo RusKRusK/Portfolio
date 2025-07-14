@@ -89,6 +89,23 @@
     <h1>制作物一覧</h1>
 
     <div class="container">
+        <h2>Deno</h2>
+        <p>Deno, Deno Deploy, Deno KVなどを使用した作品です。<br>主にTypeScriptを使用しています。</p>
+        <!-- ブログ -->
+        <details>
+            <summary>ブログ</summary>
+            <p class="project-desc">
+                このブログは、<strong>Deno</strong>と<strong>TypeScript</strong>を用いて、サーバーサイドのロジックからフロントエンドの表示まで一貫して構築したWebアプリケーションです。フレームワークに依存せず、Denoの標準機能を最大限に活用しているのが特徴で、特にデータベースには<strong>Deno KV</strong>を採用し、訪問者カウンターやBBS（掲示板）といった動的コンテンツを実現しました。<br>記事はMarkdownで管理し、サーバー側でHTMLに動的変換して配信しています。また、BBSのリアルタイム更新は、WebSocketの代わりにポーリングという手法を用いることで、実装の複雑さを抑えつつ実用的な機能を確保しました。<br>開発プロセスは、<strong>Deno Deploy</strong>との連携により、GitHubへのプッシュをトリガーとしたCI/CD（継続的インテグレーション/継続的デリバリー）を構築し、開発から公開までを自動化しています。SEO対策として、各ページに応じたOGPメタタグを動的に生成する機能も実装済みです。このプロジェクトは、Denoのポテンシャルを活かし、モダンなWeb開発技術を実践した成果物です。
+            </p>
+            <a class="project-link" href="https://ruskrusk-blog-67.deno.dev/" target="_blank">→ ブログサイトを見る</a>
+            <div class="project-media">
+                <img src="./images/blog1.png" alt="スクリーンショット1">
+                <img src="https://ruskrusk.github.io/BlogResources/images/010bbs.png" alt="スクリーンショット2">
+            </div>
+        </details>
+    </div>
+
+    <div class="container">
         <h2>Gemini API</h2>
         <p>Googleの提供するLLM(大規模言語モデル)である、GeminiのAPIを用いた作品です。</p>
         <!-- Discord Bot -->
