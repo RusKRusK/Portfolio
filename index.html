@@ -4,16 +4,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>制作物一覧</title>
+    <title>ポートフォリオ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>制作物一覧</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#project-list">作品集</a></li>
+                <li><a href="#skill-list">スキル</a></li>
+                <li><a href="#about-me">自己紹介</a></li>
+                <li><a href="#contact">コンタクト</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>作品集</h1>
 
     <div id="project-list"></div>
+    <div id="skill-list" class="container"></div>
+    <div id="about-me" class="container"></div>
+    <div id="contact" class="container"></div>
 
     <script src="projects.js"></script>
+    <script src="skills.js"></script>
     <script src="main.js"></script>
 </body>
 
