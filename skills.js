@@ -34,6 +34,8 @@ const skills = [
             "GameMaker",
             "VS Code",
             "Linux",
+            "Aseprite",
+            "Blender",
         ],
     },
     {
