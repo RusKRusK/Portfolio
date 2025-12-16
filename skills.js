@@ -51,6 +51,16 @@ const profile = {
         `2004年生まれの高専専攻科生。<br>Web開発やゲーム制作を通して、新しい技術に触れることが好きです。CUI/TUIのような低レイヤな表現から、モダンなWebアプリ開発まで幅広く興味を持っています。日々創作意欲を発揮し、自身のアイディアを形にしています。<br>アクションゲームで、新しい能力を手に入れたときに、手に入れた能力を使わないとその部屋から脱出できないような作りになっていると、「いいなぁ」と思う。`,
     contact: [
         {
+            platform: "ブログ",
+            url: "https://ruskrusk-blog-67.deno.dev",
+            text: "ruskrusk-blog-67",
+        },
+        {
+            platform: "Bluesky",
+            url: "https://bsky.app/profile/ruskrusk.bsky.social",
+            text: "@ruskrusk.bsky.social",
+        },
+        {
             platform: "GitHub",
             url: "https://github.com/RusKRusK",
             text: "@RusKRusK",
