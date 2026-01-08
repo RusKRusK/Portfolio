@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjects(projects);
     if (typeof skills !== "undefined") renderSkills(skills);
     if (typeof profile !== "undefined") renderProfile(profile);
+    animateTitle();
 });
 
 function renderSkills(skillsData) {
@@ -173,4 +174,14 @@ function renderProfile(profileData) {
         section.appendChild(linksDiv);
         contactContainer.appendChild(section);
     }
+}
+
+function animateTitle() {
+    let titleText = "ポートフォリオ | RusK ★═━┈ ★═━┈";
+    document.title = titleText;
+
+    setInterval(() => {
+        titleText = titleText.substring(1) + titleText.substring(0, 1);
+        document.title = titleText;
+    }, 400);
 }
