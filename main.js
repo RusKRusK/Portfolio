@@ -177,7 +177,7 @@ function renderProfile(profileData) {
 }
 
 function animateTitle() {
-    let titleText = "ポートフォリオ | RusK ★═━┈ ★═━┈";
+    let titleText = "ポートフォリオ_★═━┈_RusK_★═━┈_";
     document.title = titleText;
 
     setInterval(() => {
