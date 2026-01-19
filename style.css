@@ -124,16 +124,37 @@ nav a:hover {
 
 .skill-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.skill-tag {
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-name {
+    width: 150px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.skill-progress-container {
+    flex-grow: 1;
     background-color: #e0e0e0;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-right: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    max-width: 300px;
+}
+
+.skill-progress-bar {
+    background-color: #007acc;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
 }
 
 .profile-container {

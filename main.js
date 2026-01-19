@@ -100,10 +100,25 @@ function renderSkills(skillsData) {
         listDiv.className = "skill-list";
 
         category.items.forEach((skill) => {
-            const span = document.createElement("span");
-            span.className = "skill-tag";
-            span.textContent = skill;
-            listDiv.appendChild(span);
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "skill-item";
+
+            const nameSpan = document.createElement("span");
+            nameSpan.className = "skill-name";
+            nameSpan.textContent = skill.name;
+            itemDiv.appendChild(nameSpan);
+
+            const progressContainer = document.createElement("div");
+            progressContainer.className = "skill-progress-container";
+
+            const progressBar = document.createElement("div");
+            progressBar.className = "skill-progress-bar";
+            progressBar.style.width = `${skill.level}%`;
+            progressContainer.appendChild(progressBar);
+
+            itemDiv.appendChild(progressContainer);
+
+            listDiv.appendChild(itemDiv);
         });
 
         catDiv.appendChild(listDiv);
