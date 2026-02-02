@@ -21,6 +21,7 @@ const skills = [
             { name: "TensorFlow", level: 60 },
             { name: "MediaPipe", level: 70 },
             { name: "Textual", level: 75 },
+            { name: "React", level: 65 },
             { name: "TailwindCSS", level: 65 },
         ],
     },
@@ -46,7 +47,7 @@ const skills = [
 
 const profile = {
     name: "RusK",
-    iconUrl: "https://ruskrusk.github.io/BlogResources/images/icon.png",
+    iconUrl: "/images/icon.png",
     about:
         `2004年生まれの高専専攻科生。<br>Web開発やゲーム制作を通して、新しい技術に触れることが好きです。CUI/TUIのような低レイヤな表現から、モダンなWebアプリ開発まで幅広く興味を持っています。日々創作意欲を発揮し、自身のアイディアを形にしています。<br>アクションゲームで、新しい能力を手に入れたときに、手に入れた能力を使わないとその部屋から脱出できないような作りになっていると、「いいなぁ」と思う。`,
     contact: [
