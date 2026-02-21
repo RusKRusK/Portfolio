@@ -307,6 +307,8 @@ section {
 
 #projects {
     background: var(--bg-primary);
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #skills {
@@ -355,6 +357,9 @@ section {
 .panels-wrapper {
     overflow: hidden;
     width: 100%;
+    background: var(--bg-primary);
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* 横並びのパネルコンテナ — GSAPでx方向にスクロールさせる */
@@ -365,17 +370,16 @@ section {
     width: max-content; /* 中身の幅に合わせて自動拡張 */
 }
 
-/* カテゴリヘッダーを横スクロール内のパネルとして表示 */
+/* カテゴリヘッダー — 横スクロール内のセクション区切り */
 .category-panel {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 420px;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    background: var(--white);
+    padding: 30px 36px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF0F5 50%, #F5F0FF 100%);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
     flex-shrink: 0;
 }
 
@@ -634,7 +638,7 @@ section {
     font-weight: 700;
     margin-bottom: 16px;
     padding-bottom: 10px;
-    border-bottom: 3px solid var(--pink-light);
+
     color: var(--text-primary);
 }
 
@@ -752,7 +756,7 @@ section {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--pink-light);
+
     box-shadow: var(--shadow-soft);
     flex-shrink: 0;
 }
@@ -841,7 +845,7 @@ footer {
     background: var(--white);
     color: var(--text-light);
     font-size: 0.85rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
 }
 
 /* ============================================

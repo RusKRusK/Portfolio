@@ -538,7 +538,7 @@ function initAnimations() {
             ease: "none",
             scrollTrigger: {
                 trigger: ".panels-wrapper",
-                start: "top top",
+                start: "top 60px", // 固定ヘッダーの高さ分オフセット
                 end: () => "+=" + (panels.scrollWidth - window.innerWidth),
                 pin: true, // セクションを画面に固定
                 scrub: 1, // スクロール位置に連動（1秒の遅延で滑らかに）
