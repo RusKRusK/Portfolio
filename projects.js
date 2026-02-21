@@ -22,7 +22,7 @@ const projects = [
                     },
                     {
                         type: "image",
-                        src: "https://ruskrusk.github.io/BlogResources/images/010bbs.png",
+                        src: "https://ruskrusk-blog-67.deno.dev/static/images/010bbs.png",
                         alt: "スクリーンショット2",
                     },
                 ],
