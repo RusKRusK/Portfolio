@@ -680,3 +680,28 @@ function animateTitle() {
         document.title = titleText;
     }, 400);
 }
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+document.addEventListener("keydown", function (e) {
+    // F12キー
+    if (e.key === "F12" || e.keyCode === 123) {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + I (または Cmd + Opt + I on Mac)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + J (または Cmd + Opt + J on Mac)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + C (または Cmd + Opt + C on Mac)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "C") {
+        e.preventDefault();
+    }
+});
