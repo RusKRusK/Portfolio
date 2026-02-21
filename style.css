@@ -858,18 +858,17 @@ footer {
 
     .nav-links {
         display: none;
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 100%; /* ヘッダーの直下に展開 */
         left: 0;
         right: 0;
-        bottom: 0;
         background: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 32px;
-        z-index: 999;
+        gap: 8px;
+        padding: 20px 0;
+        box-shadow: var(--shadow-soft);
     }
 
     .nav-links.active {
@@ -877,7 +876,10 @@ footer {
     }
 
     .nav-links a {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-toggle {
