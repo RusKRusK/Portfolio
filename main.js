@@ -424,40 +424,40 @@ function initAnimations() {
     const heroTl = gsap.timeline({ delay: 0.3 }); // 0.3秒後に開始
     heroTl
         // 「Hello! I'm」テキストが上にフェードイン
-        .from(".hero-greeting", {
-            opacity: 0,
-            y: 30,
+        .to(".hero-greeting", {
+            opacity: 1,
+            y: 0,
             duration: 0.8,
             ease: "power2.out",
         })
         // 名前「RusK」が弾むようにスケールイン
-        .from(
+        .to(
             ".hero-name",
             {
-                opacity: 0,
-                scale: 0.8,
+                opacity: 1,
+                scale: 1,
                 duration: 1,
                 ease: "elastic.out(1, 0.6)", // 弾むイージング
             },
             "-=0.4", // 前のアニメーション完了0.4秒前に開始（オーバーラップ）
         )
         // タグライン（肩書き）がフェードイン
-        .from(
+        .to(
             ".hero-tagline",
             {
-                opacity: 0,
-                y: 20,
+                opacity: 1,
+                y: 0,
                 duration: 0.6,
                 ease: "power2.out",
             },
             "-=0.5",
         )
         // CTAボタンがポップイン
-        .from(
+        .to(
             ".hero-cta",
             {
-                opacity: 0,
-                scale: 0.7,
+                opacity: 1,
+                scale: 1,
                 duration: 0.8,
                 ease: "elastic.out(1, 0.5)",
             },
