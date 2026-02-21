@@ -4,29 +4,113 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポートフォリオ</title>
+    <title>RusK Portfolio</title>
+    <meta name="description" content="RusKのポートフォリオサイト">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <!-- Navigation -->
+    <header id="site-header">
         <nav>
-            <ul>
-                <li><a href="#project-list">作品集</a></li>
-                <li><a href="#skill-list">スキル</a></li>
-                <li><a href="#about-me">自己紹介</a></li>
+            <div class="nav-logo">RusK</div>
+            <ul class="nav-links">
+                <li><a href="#projects">作品集</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#about">自己紹介</a></li>
                 <li><a href="#contact">コンタクト</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
-    <h1>作品集</h1>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-greeting">Hello! I'm</p>
+            <h1 class="hero-name">RusK</h1>
+            <p class="hero-tagline">ポートフォリオサイトへようこそ</p>
+            <a href="#projects" class="hero-cta">作品を見る ↓</a>
+        </div>
+    </section>
 
-    <div id="project-list"></div>
-    <div id="skill-list" class="container"></div>
-    <div id="about-me" class="container"></div>
-    <div id="contact" class="container"></div>
+    <!-- Projects Section -->
+    <!-- 作品集セクション（横スクロール） -->
+    <section id="projects">
+        <div class="section-header">
+            <h2 class="section-title">作品集</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="panels-wrapper">
+            <div class="panels" id="project-list"></div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">スキル</h2>
+            <div class="section-line"></div>
+        </div>
+        <div id="skill-list" class="container"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">自己紹介</h2>
+            <div class="section-line"></div>
+        </div>
+        <div id="about-me" class="container"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">コンタクト</h2>
+            <div class="section-line"></div>
+        </div>
+        <div id="contact-area" class="container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 RusK. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="閉じる">✕</button>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts (data files first, then main) -->
     <script src="projects.js"></script>
     <script src="skills.js"></script>
     <script src="main.js"></script>
