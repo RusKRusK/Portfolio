@@ -255,10 +255,10 @@ function renderProjects(data) {
             body.appendChild(excerpt);
 
             // カテゴリ名のタグバッジ
-            const tag = document.createElement("span");
-            tag.className = "project-card-tag";
-            tag.textContent = category.categoryTitle;
-            body.appendChild(tag);
+            // const tag = document.createElement("span");
+            // tag.className = "project-card-tag";
+            // tag.textContent = category.categoryTitle;
+            // body.appendChild(tag);
 
             card.appendChild(body);
 
@@ -541,7 +541,7 @@ function initAnimations() {
                 start: "top 60px", // 固定ヘッダーの高さ分オフセット
                 end: () => "+=" + (panels.scrollWidth - window.innerWidth),
                 pin: true, // セクションを画面に固定
-                scrub: 1, // スクロール位置に連動（1秒の遅延で滑らかに）
+                scrub: true, // スクロール位置に連動
                 invalidateOnRefresh: true, // リサイズ時に再計算
             },
         });
