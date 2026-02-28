@@ -1,8 +1,3 @@
-/* ============================================
-   RusK Portfolio — パステルポップ テーマ
-   ============================================ */
-
-/* --- CSS Variables --- */
 :root {
     /* Pastel Palette */
     --pink: #FFB6C1;
@@ -471,8 +466,15 @@ section {
     font-family: var(--font-jp);
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: var(--text-primary);
+}
+
+.project-card-period {
+    font-size: 0.8rem;
+    color: var(--text-light, #888);
+    margin-bottom: 8px;
+    font-family: var(--font-en);
 }
 
 .project-card-excerpt {
@@ -579,11 +581,18 @@ section {
     font-family: var(--font-jp);
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.modal-period {
+    font-size: 0.95rem;
+    color: var(--text-light, #888);
+    margin-bottom: 16px;
+    font-family: var(--font-en);
 }
 
 .modal-body .modal-desc {

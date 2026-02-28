@@ -1,8 +1,3 @@
-/* ============================================
-   RusK Portfolio — メインスクリプト
-   GSAP ScrollTrigger + Lenis + モーダル
-   ============================================ */
-
 // ==========================
 // スムーズスクロール (Lenis)
 // ==========================
@@ -115,6 +110,18 @@ function initModal() {
         const h3 = document.createElement("h3");
         h3.textContent = item.title;
         body.appendChild(h3);
+
+        // 制作時期
+        if (item.startDate || item.endDate) {
+            const period = document.createElement("div");
+            period.className = "modal-period";
+            const start = item.startDate ? item.startDate : "?";
+            const end = item.endDate === "now"
+                ? "現在"
+                : (item.endDate ? item.endDate : "?");
+            period.textContent = `🕒 ${start} 〜 ${end}`;
+            body.appendChild(period);
+        }
 
         // 説明文（HTMLタグを含む）
         const desc = document.createElement("div");
@@ -244,6 +251,20 @@ function renderProjects(data) {
             cardTitle.className = "project-card-title";
             cardTitle.textContent = item.title;
             body.appendChild(cardTitle);
+
+            // 制作時期
+            if (item.startDate || item.endDate) {
+                const period = document.createElement("div");
+                period.className = "project-card-period";
+                const start = item.startDate ? item.startDate : "?";
+                const end = item.endDate === "now"
+                    ? "現在"
+                    : (item.endDate ? item.endDate : "?");
+                // FontAwesomeが使われているか不明ですが、テキストだけでも問題ありません。
+                // シンプルにテキスト表示にします。
+                period.textContent = `${start} 〜 ${end}`;
+                body.appendChild(period);
+            }
 
             // 説明文からHTMLタグを除去して抜粋テキストを生成
             const tmpDiv = document.createElement("div");
