@@ -5,7 +5,7 @@ let lenis;
 function initLenis() {
     // Lenisインスタンスを生成し、スムーズスクロールを設定
     lenis = new Lenis({
-        duration: 1.2, // スクロールの補間にかかる時間（秒）
+        duration: 0.5, // スクロールの補間にかかる時間（秒）
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // イージング関数（指数関数的な減速）
         smooth: true,
     });
