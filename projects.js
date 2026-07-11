@@ -13,7 +13,7 @@ const projects = [
                 links: [
                     {
                         text: "→ ブログサイトを見る",
-                        url: "https://ruskrusk-blog-67.deno.dev/",
+                        url: "https://blog-67.ruskrusk.deno.net/",
                     },
                 ],
                 media: [
@@ -24,7 +24,7 @@ const projects = [
                     },
                     {
                         type: "image",
-                        src: "https://ruskrusk-blog-67.deno.dev/static/images/010bbs.png",
+                        src: "https://blog-67.ruskrusk.deno.net/static/images/010bbs.png",
                         alt: "スクリーンショット2",
                     },
                 ],
