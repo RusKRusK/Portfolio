@@ -53,8 +53,8 @@ const profile = {
     contact: [
         {
             platform: "ブログ",
-            url: "https://ruskrusk-blog-67.deno.dev",
-            text: "ruskrusk-blog-67",
+            url: "https://blog-67.ruskrusk.deno.net",
+            text: "blog-67.ruskrusk.deno.net",
         },
         {
             platform: "Bluesky",
