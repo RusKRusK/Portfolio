@@ -299,6 +299,25 @@ const projects = [
                     { type: "video", src: "./movies/fluid1.mp4" },
                 ],
             },
+            {
+                title: "yt-dlp-tui",
+                startDate: "2026-08",
+                endDate: "2026-08",
+                description: `yt-dlpをTUIで操作できます。`,
+                links: [
+                    {
+                        text: "→ リポジトリを見る",
+                        url: "https://github.com/RusKRusK/yt-dlp-tui",
+                    },
+                ],
+                media: [
+                    {
+                        type: "image",
+                        src: "./images/ytdlptui1.png",
+                        alt: "スクリーンショット1",
+                    },
+                ],
+            },
         ],
     },
     {
